@@ -1,3 +1,23 @@
 <h2>Img input</h2>
 
+<form #form="ngForm" (ngSubmit)="submit(form.value)">
+  <input
+    name="tilesetPath"
+    ngModel
+    placeholder="Tileset file"
+    required
+    type="file"
+  />
+
+  <input
+    name="gridCellSize"
+    ngModel
+    placeholder="Grid size"
+    required
+    type="number"
+  />
+
+  <input [disabled]="form.invalid" type="submit" />
+</form>
+
 <canvas input></canvas>

@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import ImgInputDirective from './img-input.directive';
 
 @Component({
@@ -7,6 +8,10 @@ import ImgInputDirective from './img-input.directive';
   standalone: true,
   styleUrls: ['./img-input.component.scss'],
   templateUrl: './img-input.component.html',
-  imports: [ImgInputDirective],
+  imports: [ImgInputDirective, FormsModule],
 })
-export class ImgInputComponent {}
+export class ImgInputComponent {
+  submit(e: { tilesetPath: string; gridCellSize: number }) {
+    console.log(e);
+  }
+}
