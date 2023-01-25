@@ -59,6 +59,10 @@
       "skipSelector": true,
       "standaloneConfig": true,
       "style": "scss"
+    },
+    "@schematics/angular:directive": {
+      "flat": false,
+      "standalone": true
     }
   }
 }
