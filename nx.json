@@ -51,14 +51,15 @@
       "standalone": true
     },
     "@nrwl/angular:library": {
-      "linter": "eslint",
-      "unitTestRunner": "jest",
       "changeDetection": "OnPush",
       "flat": true,
+      "linter": "eslint",
+      "prefix": "app",
       "skipModule": true,
       "skipSelector": true,
       "standaloneConfig": true,
-      "style": "scss"
+      "style": "scss",
+      "unitTestRunner": "jest"
     },
     "@schematics/angular:directive": {
       "flat": false,

@@ -1,7 +1,7 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[tilesetConverterImgInput]',
+  selector: '[appImgInput]',
   standalone: true,
 })
 export default class ImgInputDirective {}

@@ -1,7 +1,7 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[tilesetConverterImgOutput]',
+  selector: '[appImgOutput]',
   standalone: true,
 })
 export default class ImgOutputDirective {}
