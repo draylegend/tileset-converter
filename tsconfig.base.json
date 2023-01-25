@@ -17,7 +17,8 @@
     "paths": {
       "@tileset-converter/home/domain": ["libs/home/domain/src/index.ts"],
       "@tileset-converter/home/feature": ["libs/home/feature/src/index.ts"],
-      "@tileset-converter/home/ui": ["libs/home/ui/src/index.ts"]
+      "@tileset-converter/home/ui": ["libs/home/ui/src/index.ts"],
+      "@tileset-converter/home/utils": ["libs/home/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
