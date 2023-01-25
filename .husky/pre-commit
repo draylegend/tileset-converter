@@ -1,2 +1,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
+
+yarn run format
+git add -A
+yarn run affected:lint
+yarn run affected:test
