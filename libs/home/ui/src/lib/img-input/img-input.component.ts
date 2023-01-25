@@ -7,4 +7,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./img-input.component.scss'],
   templateUrl: './img-input.component.html',
 })
-export default class ImgInputComponent {}
+export class ImgInputComponent {}

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import ImgInputComponent from './img-input.component';
+import { ImgInputComponent } from './img-input.component';
 
 describe('ImgInputComponent', () => {
   let fixture: ComponentFixture<ImgInputComponent>;
