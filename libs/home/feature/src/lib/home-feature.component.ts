@@ -6,4 +6,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./home-feature.component.scss'],
   templateUrl: './home-feature.component.html',
 })
-export class HomeFeatureComponent {}
+export default class HomeFeatureComponent {}

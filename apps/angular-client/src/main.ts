@@ -1,4 +1,7 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { AppComponent } from './app/app.component';
+import coreProviders from '@tileset-converter/core/domain';
+import AppComponent from './app/app.component';
 
-bootstrapApplication(AppComponent).catch(e => console.error(e));
+bootstrapApplication(AppComponent, {
+  providers: coreProviders,
+}).catch(e => console.error(e));
