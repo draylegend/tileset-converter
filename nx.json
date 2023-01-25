@@ -38,27 +38,27 @@
   },
   "generators": {
     "@nrwl/angular:application": {
-      "e2eTestRunner": "cypress",
-      "linter": "eslint",
-      "standalone": true,
-      "standaloneConfig": true,
       "style": "scss",
-      "unitTestRunner": "jest"
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress",
+      "standalone": true,
+      "standaloneConfig": true
     },
     "@nrwl/angular:component": {
+      "style": "scss",
       "changeDetection": "OnPush",
-      "standalone": true,
-      "style": "scss"
+      "standalone": true
     },
     "@nrwl/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest",
       "changeDetection": "OnPush",
       "flat": true,
-      "linter": "eslint",
       "skipModule": true,
       "skipSelector": true,
       "standaloneConfig": true,
-      "style": "scss",
-      "unitTestRunner": "jest"
+      "style": "scss"
     }
   }
 }
