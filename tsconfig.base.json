@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@tileset-converter/core/domain": ["libs/core/domain/src/index.ts"],
       "@tileset-converter/home/domain": ["libs/home/domain/src/index.ts"],
       "@tileset-converter/home/feature": ["libs/home/feature/src/index.ts"],
       "@tileset-converter/home/ui": ["libs/home/ui/src/index.ts"],
