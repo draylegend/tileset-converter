@@ -1,8 +1,9 @@
 <h2>Img input</h2>
 
-<form #form="ngForm" (ngSubmit)="submit(form.value)">
+<form #form="ngForm" (ngSubmit)="submit(form.value, tileset.files?.[0]!)">
   <input
-    name="tilesetPath"
+    #tileset
+    name="tileset"
     ngModel
     placeholder="Tileset file"
     required
@@ -20,4 +21,4 @@
   <input [disabled]="form.invalid" type="submit" />
 </form>
 
-<canvas input></canvas>
+<canvas *rxIf="configChange as config" [config]="config" input></canvas>
