@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HomeService } from '@tileset-converter/home/domain';
 import HomeFeatureComponent from './home-feature.component';
 
 describe('HomeFeatureComponent', () => {
@@ -8,6 +9,7 @@ describe('HomeFeatureComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HomeFeatureComponent],
+      providers: [HomeService],
     });
 
     fixture = TestBed.createComponent(HomeFeatureComponent);

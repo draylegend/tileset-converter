@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { HomeService } from '@tileset-converter/home/domain';
 import {
   ImgInputComponent,
   ImgOutputComponent,
@@ -11,4 +12,6 @@ import {
   templateUrl: './home-feature.component.html',
   imports: [ImgInputComponent, ImgOutputComponent],
 })
-export default class HomeFeatureComponent {}
+export default class HomeFeatureComponent {
+  constructor(public service: HomeService) {}
+}
