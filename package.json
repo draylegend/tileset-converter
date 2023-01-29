@@ -23,8 +23,8 @@
     "@angular/platform-browser-dynamic": "~15.1.0",
     "@angular/router": "~15.1.0",
     "@nrwl/angular": "^15.6.1",
-    "@rx-angular/cdk": "latest",
-    "@rx-angular/template": "^1.0.0-rc.5",
+    "@rx-angular/cdk": "^1.0.0",
+    "@rx-angular/template": "^1.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
