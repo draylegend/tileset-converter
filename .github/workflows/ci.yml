@@ -31,6 +31,7 @@ jobs:
         with:
           name: angular-client
           path: dist/apps/angular-client
+      - run: ls -lisa
 
   deploy:
     needs: main
