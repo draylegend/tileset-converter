@@ -6,8 +6,9 @@ import {
   InputConfig,
   InputFormValue,
   readFile,
+  Selection,
 } from '@tileset-converter/home/utils';
-import { map, Observable, ReplaySubject, switchMap } from 'rxjs';
+import { map, Observable, ReplaySubject, Subject, switchMap } from 'rxjs';
 import ImgInputDirective from './img-input.directive';
 
 interface MergedFormValue {
@@ -25,7 +26,6 @@ interface MergedFormValue {
 })
 export class ImgInputComponent {
   form = new ReplaySubject<MergedFormValue>();
-
   @Output()
   configChange: Observable<InputConfig> = this.form.pipe(
     switchMap(({ file, gridCellSize }) =>
@@ -35,13 +35,10 @@ export class ImgInputComponent {
       ),
     ),
   );
+  @Output()
+  selectionChange = new Subject<Selection>();
 
   submit({ gridCellSize }: InputFormValue, file: File) {
     this.form.next({ file, gridCellSize });
-  }
-
-  selectionChange(s: any) {
-    // TODO
-    console.log(s);
   }
 }

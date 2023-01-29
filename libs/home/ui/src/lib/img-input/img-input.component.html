@@ -22,7 +22,7 @@
 </form>
 
 <canvas
-  (selectionChange)="selectionChange($event)"
+  (selectionChange)="selectionChange.next($event)"
   *rxIf="configChange as config"
   [config]="config"
   input
