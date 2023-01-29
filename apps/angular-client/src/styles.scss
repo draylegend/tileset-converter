@@ -8,3 +8,7 @@ router-outlet,
 ng-component {
   display: contents;
 }
+
+canvas {
+  border: 1px dashed;
+}

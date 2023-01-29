@@ -10,7 +10,6 @@ import {
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  styleUrls: ['./home-feature.component.scss'],
   templateUrl: './home-feature.component.html',
   imports: [ImgInputComponent, ImgOutputComponent, PushModule, IfModule],
 })

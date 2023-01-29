@@ -14,7 +14,6 @@ import ImgOutputDirective from './img-output.directive';
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-img-output[mergedConfig]',
   standalone: true,
-  styleUrls: ['./img-output.component.scss'],
   templateUrl: './img-output.component.html',
   imports: [ImgOutputDirective, FormsModule, IfModule],
 })
