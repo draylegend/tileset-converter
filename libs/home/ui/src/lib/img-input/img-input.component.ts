@@ -39,4 +39,9 @@ export class ImgInputComponent {
   submit({ gridCellSize }: InputFormValue, file: File) {
     this.form.next({ file, gridCellSize });
   }
+
+  selectionChange(s: any) {
+    // TODO
+    console.log(s);
+  }
 }

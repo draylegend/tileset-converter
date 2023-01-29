@@ -21,4 +21,9 @@
   <input [disabled]="form.invalid" type="submit" />
 </form>
 
-<canvas *rxIf="configChange as config" [config]="config" input></canvas>
+<canvas
+  (selectionChange)="selectionChange($event)"
+  *rxIf="configChange as config"
+  [config]="config"
+  input
+></canvas>
