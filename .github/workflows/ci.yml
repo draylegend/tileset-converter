@@ -22,6 +22,19 @@ jobs:
         yarn nx affected --target=test --parallel=3 --ci --code-coverage
         yarn nx affected --target=build --parallel=3
 
+  deploy:
+    needs: main
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to gh pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+
   agents:
     name: Nx Cloud - Agents
     uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.11.2

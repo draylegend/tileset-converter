@@ -9,6 +9,7 @@
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "baseHref": "tileset-converter",
         "outputPath": "dist/apps/angular-client",
         "index": "apps/angular-client/src/index.html",
         "main": "apps/angular-client/src/main.ts",
