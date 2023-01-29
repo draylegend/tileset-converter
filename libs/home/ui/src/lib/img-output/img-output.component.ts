@@ -1,12 +1,26 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  Output,
+} from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MergedConfig, OutputConfig } from '@tileset-converter/home/utils';
+import { Subject } from 'rxjs';
 import ImgOutputDirective from './img-output.directive';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'app-img-output',
+  selector: 'app-img-output[mergedConfig]',
   standalone: true,
   styleUrls: ['./img-output.component.scss'],
   templateUrl: './img-output.component.html',
-  imports: [ImgOutputDirective],
+  imports: [ImgOutputDirective, FormsModule],
 })
-export class ImgOutputComponent {}
+export class ImgOutputComponent {
+  @Input()
+  mergedConfig!: MergedConfig;
+
+  @Output()
+  configChange = new Subject<OutputConfig>();
+}

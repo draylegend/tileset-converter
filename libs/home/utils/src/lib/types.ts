@@ -14,3 +14,18 @@ export interface Selection {
   w: number;
   h: number;
 }
+
+export interface OutputConfig {
+  gridCellSize: number;
+  width: number;
+  height: number;
+}
+
+export interface MergedConfig {
+  img: HTMLImageElement;
+  inputGridCellSize: number;
+  outputGridCellSize: number;
+  width: number;
+  height: number;
+  selection: Selection;
+}

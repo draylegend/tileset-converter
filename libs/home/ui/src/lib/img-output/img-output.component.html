@@ -1,3 +1,16 @@
 <h2>Img output</h2>
 
-<canvas output></canvas>
+<form #form="ngForm" (ngSubmit)="configChange.next(form.value)">
+  <input
+    name="gridCellSize"
+    ngModel
+    placeholder="Grid cell size"
+    required
+    type="number"
+  />
+  <input name="width" ngModel placeholder="Width" required type="number" />
+  <input name="height" ngModel placeholder="Height" required type="number" />
+  <input [disabled]="form.invalid" type="submit" />
+</form>
+
+<canvas [config]="mergedConfig" output></canvas>

@@ -2,4 +2,7 @@
   (configChange)="service.inputConfig.next($event)"
   (selectionChange)="service.selection.next($event)"
 />
-<app-img-output />
+<app-img-output
+  (configChange)="service.outputConfig.next($event)"
+  [mergedConfig]="service.mergedConfig$ | push"
+/>
