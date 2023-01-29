@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Input, Output } from '@angular/core';
-import { InputConfig, Selection } from '@tileset-converter/home/utils';
+import { InputConfig, InputSelection } from '@tileset-converter/home/utils';
 import {
   fromEvent,
   map,
@@ -18,7 +18,7 @@ import {
 export default class ImgInputDirective {
   #config!: InputConfig;
   #canvas = this.ref.nativeElement;
-  #selection: Selection = { x: 0, y: 0, w: 0, h: 0 };
+  #selection: InputSelection = { x: 0, y: 0, w: 0, h: 0 };
   #mouseUp = fromEvent(this.#canvas, 'mouseup');
   @Output()
   selectionChange = this.#mouseUp.pipe(
@@ -43,8 +43,6 @@ export default class ImgInputDirective {
 
     if (!ctx) throw Error('Provide input canvas!');
 
-    ctx.imageSmoothingEnabled = false;
-    ctx.imageSmoothingQuality = 'high';
     this.#ctx = ctx;
   }
 
@@ -76,7 +74,7 @@ export default class ImgInputDirective {
 
   #createSelection(start: MouseEvent) {
     return pipe(
-      map<MouseEvent, Selection>(end => {
+      map<MouseEvent, InputSelection>(end => {
         const x = Math.trunc(start.offsetX / this.#config.gridCellSize);
         const y = Math.trunc(start.offsetY / this.#config.gridCellSize);
         const w = Math.trunc(end.offsetX / this.#config.gridCellSize);

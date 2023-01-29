@@ -5,8 +5,8 @@ import {
   createImg,
   InputConfig,
   InputFormValue,
+  InputSelection,
   readFile,
-  Selection,
 } from '@tileset-converter/home/utils';
 import { map, Observable, ReplaySubject, Subject, switchMap } from 'rxjs';
 import ImgInputDirective from './img-input.directive';
@@ -36,7 +36,7 @@ export class ImgInputComponent {
     ),
   );
   @Output()
-  selectionChange = new Subject<Selection>();
+  selectionChange = new Subject<InputSelection>();
 
   submit({ gridCellSize }: InputFormValue, file: File) {
     this.form.next({ file, gridCellSize });

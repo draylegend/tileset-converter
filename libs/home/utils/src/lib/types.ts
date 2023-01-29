@@ -8,11 +8,26 @@ export interface InputConfig {
   img: HTMLImageElement;
 }
 
-export interface Selection {
+export interface InputSelection {
   x: number;
   y: number;
   w: number;
   h: number;
+}
+
+export interface OutputSelection {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  offset: {
+    x: number;
+    y: number;
+  };
+}
+
+export interface Selections {
+  [id: string]: OutputSelection;
 }
 
 export interface OutputConfig {
@@ -27,5 +42,5 @@ export interface MergedConfig {
   outputGridCellSize: number;
   width: number;
   height: number;
-  selection: Selection;
+  selection: OutputSelection;
 }

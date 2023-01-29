@@ -13,4 +13,4 @@
   <input [disabled]="form.invalid" type="submit" />
 </form>
 
-<canvas [config]="mergedConfig" output></canvas>
+<canvas *rxIf="mergedConfig" [config]="mergedConfig" output></canvas>

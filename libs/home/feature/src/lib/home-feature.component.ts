@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { IfModule } from '@rx-angular/template/if';
 import { PushModule } from '@rx-angular/template/push';
 import { HomeService } from '@tileset-converter/home/domain';
 import {
@@ -11,7 +12,7 @@ import {
   standalone: true,
   styleUrls: ['./home-feature.component.scss'],
   templateUrl: './home-feature.component.html',
-  imports: [ImgInputComponent, ImgOutputComponent, PushModule],
+  imports: [ImgInputComponent, ImgOutputComponent, PushModule, IfModule],
 })
 export default class HomeFeatureComponent {
   constructor(public service: HomeService) {}
